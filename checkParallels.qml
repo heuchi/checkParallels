@@ -23,12 +23,12 @@ import MuseScore 1.0
 
 MuseScore {
       menuPath: "Plugins.Proof Reading.Check for parallel 5ths/8ves"
-      description: "Mark parallel fifths and octaves."
+      description: "Check for parallel fifths and octaves.\nMarks consecutive fifths and octaves and also ascending hidden parallels."
       version: "0.1"
 
       property var colorFifth: "#ff6500";
       property var colorOctave: "#ff0050";
-      property var colorExp: "#a03500";
+      property var colorHidden: "#a03500";
 
       property bool processAll: false;
       property bool errorChords: false;
@@ -204,12 +204,12 @@ MuseScore {
                                                                   colorFifth,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorFifth);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
-                                                            // exposed parallel (only when moving up)
+                                                            // hidden parallel (only when moving up)
                                                             foundParallels++;
-                                                            console.log ("E5:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"exp. 5",
-                                                                  colorExp,track,prevTick[track]);
-                                                            markColor(curNote[track],curNote[i],colorExp);
+                                                            console.log ("H5:"+cint+", "+pint);
+                                                            markText(prevNote[track],prevNote[i],"hidden 5",
+                                                                  colorHidden,track,prevTick[track]);
+                                                            markColor(curNote[track],curNote[i],colorHidden);
                                                       }                                                
                                                 }
                                                 // test for 8th
@@ -222,12 +222,12 @@ MuseScore {
                                                                   colorOctave,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorOctave);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
-                                                            // exposed parallel (only when moving up)
+                                                            // hidden parallel (only when moving up)
                                                             foundParallels++;
-                                                            console.log ("E8:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"exp. 8",
-                                                                  colorExp,track,prevTick[track]);
-                                                            markColor(curNote[track],curNote[i],colorExp);
+                                                            console.log ("H8:"+cint+", "+pint);
+                                                            markText(prevNote[track],prevNote[i],"hidden 8",
+                                                                  colorHidden,track,prevTick[track]);
+                                                            markColor(curNote[track],curNote[i],colorHidden);
                                                       }                                                
                                                 }
                                           }
