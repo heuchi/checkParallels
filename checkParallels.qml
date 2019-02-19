@@ -200,7 +200,7 @@ MuseScore {
                                                       if (cint == pint) {
                                                             foundParallels++;
                                                             console.log ("P5:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"open 5",
+                                                            markText(prevNote[track],prevNote[i],"parallel 5",
                                                                   colorFifth,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorFifth);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
@@ -218,7 +218,7 @@ MuseScore {
                                                       if (cint == pint) {
                                                             foundParallels++;
                                                             console.log ("P8:"+cint+", "+pint+"Tracks "+track+","+i+" Tick="+segment.tick);
-                                                            markText(prevNote[track],prevNote[i],"open 8",
+                                                            markText(prevNote[track],prevNote[i],"parallel 8",
                                                                   colorOctave,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorOctave);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
