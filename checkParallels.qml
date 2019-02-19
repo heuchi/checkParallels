@@ -200,14 +200,14 @@ MuseScore {
                                                       if (cint == pint) {
                                                             foundParallels++;
                                                             console.log ("P5:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"parallel 5",
+                                                            markText(prevNote[track],prevNote[i],"parallel 5th",
                                                                   colorFifth,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorFifth);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
                                                             // hidden parallel (only when moving up)
                                                             foundParallels++;
                                                             console.log ("H5:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"hidden 5",
+                                                            markText(prevNote[track],prevNote[i],"hidden 5th",
                                                                   colorHidden,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorHidden);
                                                       }                                                
@@ -218,14 +218,14 @@ MuseScore {
                                                       if (cint == pint) {
                                                             foundParallels++;
                                                             console.log ("P8:"+cint+", "+pint+"Tracks "+track+","+i+" Tick="+segment.tick);
-                                                            markText(prevNote[track],prevNote[i],"parallel 8",
+                                                            markText(prevNote[track],prevNote[i],"parallel 8th",
                                                                   colorOctave,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorOctave);
                                                       } else if (dir1 == 1 && Math.abs(pint) < Math.abs(cint)) {
                                                             // hidden parallel (only when moving up)
                                                             foundParallels++;
                                                             console.log ("H8:"+cint+", "+pint);
-                                                            markText(prevNote[track],prevNote[i],"hidden 8",
+                                                            markText(prevNote[track],prevNote[i],"hidden 8th",
                                                                   colorHidden,track,prevTick[track]);
                                                             markColor(curNote[track],curNote[i],colorHidden);
                                                       }                                                
